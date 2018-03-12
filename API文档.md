@@ -12,7 +12,7 @@
 
 
 ## 1、根据经纬度获取位置详情
-     
+
 ### 请求URL：
 	http://localhost:3000/position/:geohash
 
@@ -182,7 +182,7 @@
 
 
 ## 4、获取一次性验证码
-     
+
 ### 请求URL：
 	http://localhost:3000/captcha
 
@@ -205,7 +205,7 @@
 
 
 ## 5、用户名密码登陆
-     
+
 ### 请求URL：
 	http://localhost:3000/login_pwd
 
@@ -235,7 +235,7 @@
 
 
 ## 6、发送短信验证码
-     
+
 ### 请求URL：
 	http://localhost:3000/sendcode
 
@@ -251,13 +251,20 @@
 	|phone       |Y       |string   |手机号
 
 ### 返回示例：
+  成功
       {
         "code": 0,
       }
-      
-      
+
+  失败
+      {
+          "code": 1,
+          "msg":验证码发送失败
+      }
+
+
 ## 7、手机号验证码登陆
-     
+
 ### 请求URL：
 	http://localhost:3000/login_sms
 
@@ -284,7 +291,7 @@
         "code": 1,
         "msg": "手机号或验证码不正确"
       }
-      
+
 ### 8、根据会话获取用户信息
 
 #### 请求URL：
